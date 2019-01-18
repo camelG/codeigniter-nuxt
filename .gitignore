@@ -117,3 +117,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 #public_html
 public_html/*
 !public_html/API/
+
+#dev
+application/config/config.php
+application/config/database.php
