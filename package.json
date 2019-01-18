@@ -1,0 +1,23 @@
+{
+  "name": "codeigniter-nuxt",
+  "version": "1.0.0",
+  "description": "My phenomenal Nuxt.js project",
+  "author": "hei",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0",
+    "bootstrap-vue": "^2.0.0-beta",
+    "bootstrap": "^4.1.3",
+    "@nuxtjs/axios": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
