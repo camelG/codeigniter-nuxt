@@ -1,6 +1,6 @@
 # codeigniter-nuxt
 
-> codeigniter3 + nuxtjs
+> codeigniter 3.1.10 + nuxtjs 2.11.0
 >
 > server: codeigniter
 > client: nuxtjs
