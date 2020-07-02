@@ -1,6 +1,6 @@
 # codeigniter-nuxt
 
-> codeigniter 3.1.10 + nuxtjs 2.11.0
+> codeigniter 3.1.10 + nuxtjs 2.13.1
 >
 > server: codeigniter
 > client: nuxtjs
@@ -46,7 +46,7 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 ```bash
 # c:\xampp\apache\conf\extra\httpd-vhosts.conf
 <VirtualHost *:80>
-    DocumentRoot "C:\xampp\htdocs\codeigniter-nuxt\public_html"
-    ServerName codeigniter-nuxt
+    DocumentRoot "C:\xampp\htdocs\codeigniter-nuxt\public_html\api"
+    ServerName api.codeigniter-nuxt
 </VirtualHost>
 ```

@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
-logs
+/logs
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -77,19 +77,27 @@ dist
 # Serverless directories
 .serverless
 
-# IDE
+# IDE / Editor
 .idea
 
-# Codeigniter
+# Service worker
+sw.*
+
+# macOS
+.DS_Store
+
+# Vim swap files
+*.swp
+
+# php
 .DS_Store
 
 application/cache/*
 !application/cache/index.html
-application/vendor/
+
 application/logs/*
 !application/logs/index.html
-application/vendor/
-application/sess/
+
 !application/*/.htaccess
 
 composer.lock
@@ -114,10 +122,13 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /tests/tests/
 /tests/results/
 
-#public_html
-public_html/*
-!public_html/API/
+.env
 
-#dev
-application/config/config.php
-application/config/database.php
+#xserver
+autoreply
+htpasswd
+log
+mail
+public_html
+script
+xserver_php
