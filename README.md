@@ -17,8 +17,6 @@ $ git clone https://github.com/camelg/codeigniter-nuxt.git
 ## Composer Install
 
 ```bash
-$ cd codeigniter-nuxt/application
-
 $ composer install
 ```
 
