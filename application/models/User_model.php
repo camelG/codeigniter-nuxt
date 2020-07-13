@@ -20,18 +20,6 @@ class User_model extends CI_Model
         return $query->result();
 
     }
-    public function getUserList()
-    {
-        $query = $this->db
-            ->from($this->table . ' AS u')
-            ->join('order_course_count AS oc', 'oc.user_id = u.id')
-            ->select('oc.id,oc.user_id,oc.course_id,oc.count,u.name,u.tel,u.email')
-            ->order_by('oc.id', 'DESC')
-            ->get();
-
-        return $query->result();
-
-    }
     public function insertRow(array $data)
     {
         return $this->db->insert($this->table, $data) ? $this->db->insert_id() : false;
