@@ -1,6 +1,8 @@
+require("dotenv").config();
 const pkg = require("./package");
 
 module.exports = {
+  ssr: false,
   head: {
     title: pkg.name,
     meta: [
@@ -8,7 +10,14 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: pkg.description }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+      {
+        src:
+          "https://polyfill.io/v3/polyfill.min.js?features=default,es2015,Intl",
+        crossorigin: "anonymous"
+      }
+    ]
   },
   loading: { color: "#fff" },
   css: [],
@@ -67,8 +76,8 @@ module.exports = {
         sameSite: "None",
         Secure: true
       }
-    },
-    plugins: ["~/plugins/auth-lang-redirect"]
+    }
+    // plugins: ["~/plugins/auth-lang-redirect"]
   },
   bootstrapVue: {
     icons: false
