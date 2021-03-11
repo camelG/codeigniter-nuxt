@@ -9,9 +9,8 @@
 
 ```bash
 # xampp active directory
-$ cd c:\xampp\htdocs\
-
 $ git clone https://github.com/camelg/codeigniter-nuxt.git
+$ cp .env.example .env
 ```
 
 ## Composer Install
@@ -31,7 +30,6 @@ $ npm run dev
 
 # build for production and launch server
 $ npm run build
-$ npm start
 
 # generate static project
 $ npm run generate
@@ -41,8 +39,9 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## Apache Config
 
+httpd-vhosts.conf
+
 ```bash
-# c:\xampp\apache\conf\extra\httpd-vhosts.conf
 <VirtualHost *:80>
     DocumentRoot "C:\xampp\htdocs\codeigniter-nuxt\public_html\api"
     ServerName api.codeigniter-nuxt
