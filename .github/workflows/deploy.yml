@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  clone:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        uses: cross-the-world/ssh-pipeline@master
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASS }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd ~/
+            git pull origin master
+            npm run build
