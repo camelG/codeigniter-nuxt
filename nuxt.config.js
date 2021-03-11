@@ -13,15 +13,62 @@ module.exports = {
   loading: { color: "#fff" },
   css: [],
   plugins: [],
-  modules: ["@nuxtjs/axios", "bootstrap-vue/nuxt"],
+  modules: [
+    "@nuxtjs/axios",
+    "bootstrap-vue/nuxt",
+    "@nuxtjs/auth",
+    "@nuxtjs/dotenv"
+  ],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: process.env.API_URL
   },
   build: {
     /*
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  auth: {
+    redirect: {
+      login: "/login",
+      logout: "/login",
+      callback: "/",
+      home: "/"
+    },
+    cookie: {
+      prefix: "auth.",
+      options: {
+        path: "/",
+        expires: 365
+      }
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: "/auth/login",
+            method: "post",
+            properryName: "token"
+          },
+          logout: {
+            url: "/auth/logout",
+            method: "post"
+          },
+          user: {
+            url: "/auth/user",
+            method: "get",
+            propertyName: "user"
+          }
+        },
+        tokenRequired: true,
+        tokenName: "Authorizationx",
+        tokenType: false, //Bearer
+        sameSite: "None",
+        Secure: true
+      }
+    },
+    plugins: ["~/plugins/auth-lang-redirect"]
   },
   bootstrapVue: {
     icons: false
