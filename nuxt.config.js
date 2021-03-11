@@ -24,9 +24,9 @@ module.exports = {
   plugins: [],
   modules: [
     "@nuxtjs/axios",
-    "bootstrap-vue/nuxt",
     "@nuxtjs/auth",
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+    "bootstrap-vue/nuxt"
   ],
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
