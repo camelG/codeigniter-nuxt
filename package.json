@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build && cp -rf dist/* public_html",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate && cp -rf dist/* public_html"
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.9.1",
