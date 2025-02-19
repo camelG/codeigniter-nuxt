@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^5.0.0",
     "bootstrap-vue": "^2.15.0",
     "node-sass": "^5.0.0",
     "nuxt": "^2.18.1",
